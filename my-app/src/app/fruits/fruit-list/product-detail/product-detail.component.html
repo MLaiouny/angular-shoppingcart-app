@@ -1,0 +1,29 @@
+<!-- <div>
+  <p>the product you selected to view is {{fruit.name}}</p>
+</div>
+<div>
+  <div>
+    <p>Here goes the price of the selected product {{fruit.price}}</p>
+  </div>
+  <div>
+    <p>Here goes the details of the product {{fruit.description}}</p>
+  </div>
+</div>
+<button>Back to store</button> -->
+
+<div>
+  <h3>The product you selected is: {{fruit.name}}</h3>
+</div>
+
+<div>
+  <div id = "imgDiv">
+    <img  id = "image" src = {{fruit.imagePath}}>
+  </div>
+
+  <div id = "descDiv">
+    <p>{{fruit.longDescription}}</p>
+    <button (click) = "backTostore()">Back to Store</button>
+  </div>
+</div>
+
+

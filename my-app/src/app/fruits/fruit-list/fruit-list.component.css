@@ -1,0 +1,22 @@
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    width: 30px;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    
+}
+
+td {
+    height: 30px;
+}
+th {
+    text-align: right;
+    height: 50px;
+}
+
+.clicked {
+    enable-background: false;
+}

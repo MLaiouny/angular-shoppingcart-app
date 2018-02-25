@@ -1,0 +1,67 @@
+<div class = "row">
+	<div class = "table-responsive">
+		<table class = "table">
+			<thead>
+				<tr>
+					<th colspan = "7">
+						<span (click) = "toShoppingCart()">
+							<i class = "fa fa-shopping-cart"
+							id = 'myCart'
+								></i>
+						</span>
+						<span></span>
+							{{count}}<span> </span>item(s):<span> </span><span>$</span>
+							<span> </span>{{totalPrice}}
+					</th>
+							
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor = "let fruitEl of fruits; let i = index">
+					<!-- (click)= "gotoDetail(i)" -->
+					
+					
+				
+				
+				
+					<td>
+							<img [src] = "fruitEl.imagePath"
+							alt = "{{fruitEl.name}}"
+							height="42"
+							width ="42">
+						
+					</td>
+					<td>
+						<button (click) = "gotoDetail(i, event)">More info</button>
+					</td>
+
+					
+					<td>{{fruitEl.name}}</td>
+					<td>{{fruitEl.shortDescription}}</td>
+					<td>{{fruitEl.price | currency}}</td>
+					<td>
+						
+						<select id = 'myInput'>
+							<option value = '1'>1</option>
+							<option value = '2'>2</option>
+							<option value = '3'>3</option>
+							<option value = '4'>4</option>
+							<option value = '5'>5</option>
+							<option value = '6'>6</option>
+							<option value = '7'>7</option>
+							<option value = "8">8</option>
+							<option value = '9'>9</option>
+							<option value = '10'>10</option>
+						</select>
+					</td>
+					<td><button class = "btnAddToCart" ng-disabled = "clicked" (click)= 'onAddtocart(i)'>
+						add to cart
+					</button>
+					</td>
+					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+

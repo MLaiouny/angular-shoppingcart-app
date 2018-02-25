@@ -1,0 +1,37 @@
+
+<div class = "table-responsive">
+    <table class = "table">
+        <thead>
+            <tr>
+                <th>item</th>
+                <th>Quantity</th>
+                <th>Unit price</th>
+                <th>Price</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let purchaseEl of purchases; let i = index">
+                <td>{{fruits[purchaseEl.index].name}}</td>
+                <td>{{purchaseEl.quantity}}</td>
+                <td>{{fruits[purchaseEl.index].price}}</td>
+                <td>{{purchaseEl.price | currency}}</td>
+                <td><button id = 'btnDelete' (click) = 'clearPurchase(this.i)'>
+                           
+                    X</button>
+                </td>
+                <td><button id = 'btnEdit' (click) = 'editPurchase(i)'>Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <h2>Number of items:</h2>{{count}}
+    <h3>Total Price:</h3><span>$ </span>{{totalPrice}}
+</div>
+<br><br>
+<div>
+    <button (click) = 'goToCheckOut()' >Go to Check out</button>
+    <button (click) = 'backToStore()' class = 'buttonFloat' >Back to store</button>
+    <button (click) = 'clearCart()' class = 'buttonFloat'>Clear Shopping cart</button>
+</div>
